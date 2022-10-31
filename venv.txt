@@ -1,0 +1,9 @@
+# Create virtual env
+python3 -m venv log_activity_etl
+
+# activating
+cd log_activity_etl
+source bin/activate
+
+# Launch vs code
+code
