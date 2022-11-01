@@ -21,3 +21,9 @@ conn = pymysql.connect(host=hostname,
                        port=int(port))
 
 cursor = conn.cursor()
+
+print('Simulating orders..')
+cursor.callproc(procname='simulate_orders')
+cursor.close()
+coss.close()
+print('Done')
