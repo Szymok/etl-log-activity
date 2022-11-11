@@ -55,7 +55,7 @@ for event in b_stream:
 		# Collect events from the orders table
 		if event.table == 'orders':
 			event_dict = {}
-			if isinstace(event, row_event.DeleteRowsEvent):
+			if isinstance(event, row_event.DeleteRowsEvent):
 				event_dict['action'] = 'delete'
 				event_dict.update(row['values'].items())
 			elif isinstance(event, row_event.UpdateRowsEvent):
